@@ -28,17 +28,17 @@
     // Iniciar o jogo, definir quem joga primeiro
     // Anotar/Registrar a jogada, do primeiro jogador
     do {
-        window.alert(tabuleiro[0].ToString() + tabuleiro[1] + tabuleiro[2]);
-        window.alert(tabuleiro[3].ToString() + tabuleiro[4] + tabuleiro[5]);
-        window.alert(tabuleiro[6].ToString() + tabuleiro[7] + tabuleiro[8]);
+        console.log(tabuleiro[0].ToString() + tabuleiro[1] + tabuleiro[2]);
+        console.log(tabuleiro[3].ToString() + tabuleiro[4] + tabuleiro[5]);
+        console.log(tabuleiro[6].ToString() + tabuleiro[7] + tabuleiro[8]);
         jogada = "";
-        window.alert("Digite a posição da sua peça JOGADOR" + jogadorDaVez);
+        console.log("Digite a posição da sua peça JOGADOR" + jogadorDaVez);
         jogada = window.prompt('Enter a value for jogada');
 
         // Simula a função Serial.parseltn()do Arduino
         linha = parseInt(jogada.charAt(0));
         coluna = parseInt(jogada.charAt(2));
-        window.alert("Linha: " + linha + "; Coluna: " + coluna);
+        console.log("Linha: " + linha + "; Coluna: " + coluna);
 
         // Verificae se a posição "jogada" é válida
         // Converter a jogada texto em dois inteiros linha e coluna
@@ -54,7 +54,7 @@
             }
             velha = velha + 1;
         } else {
-            window.alert("Posição ocupada, jogue novamente!!!");
+            console.log("Posição ocupada, jogue novamente!!!");
 
             // Informar ao Jogador 1 que a posição está preenchida, é inválida e ela precisa informar um posição válida
         }
@@ -96,7 +96,7 @@ function validaTabuleiro(tabuleiro, jogadorDaVez) {
         } else {
             if (tabuleiro[0] == jogadorDaVez && tabuleiro[4] == jogadorDaVez && tabuleiro[8] == jogadorDaVez || tabuleiro[2] == jogadorDaVez && tabuleiro[4] == jogadorDaVez && tabuleiro[6] == jogadorDaVez) {
                 retorno = 2;
-                window.alert("VOCE GANHOU");
+                console.log("VOCE GANHOU");
             }
         }
     }
